@@ -786,6 +786,8 @@ jobs:
         with:
           name: package
           path: |
+            bld/lib/*
+            bld/lib/*.*
             bld/src/curl.exe
 
       - name: 'cmake build tests'
