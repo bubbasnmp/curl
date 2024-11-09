@@ -111,6 +111,14 @@ jobs:
           find . -name '*.exe' -o -name '*.dll'
           bld/src/curl.exe --disable --version
 
+      - name: Upload Windows executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: package
+          path: bld/lib/.libs/cygcurl-4.dll
+          path: /bld/src/.libs/curl.exe
+          path: bld/src/curl.exe
+
       - name: 'autotools build tests'
         if: ${{ matrix.build == 'automake' && matrix.tflags != 'skipall' }}
         timeout-minutes: 15
