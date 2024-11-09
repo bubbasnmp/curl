@@ -1,6 +1,7 @@
 # Copyright (C) Viktor Szakats
 #
 # SPDX-License-Identifier: curl
+# 241109 - does new comment run the workflow?
 
 name: Windows
 
