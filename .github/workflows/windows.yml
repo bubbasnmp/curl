@@ -778,6 +778,8 @@ jobs:
           find . -name '*.exe' -o -name '*.dll'
           if [ '${{ matrix.plat }}' != 'uwp' ]; then
             PATH="$PWD/bld/lib:$PATH"
+            echo $PATH
+            echo %PATH%
             bld/src/curl.exe --disable --version
           fi
 
