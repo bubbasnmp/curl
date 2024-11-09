@@ -782,7 +782,7 @@ jobs:
           fi
 
       - name: 'Upload Windows executable'
-        if ${{ matrix.plat == 'windows' && matrix.name == 'openssl' }}
+        if: ${{ matrix.plat == 'windows' && matrix.name == 'openssl' }}
         uses: actions/upload-artifact@v4
         with:
           name: package
